@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PT Surya Delima Gemilang — Kontraktor Umum & Spesialis</title>
+  <meta name="description" content="PT Surya Delima Gemilang — penyedia jasa konstruksi, renovasi, dan manajemen proyek. Profesional, aman, tepat waktu." />
+
+  <style>
+    :root{
+      --primary:#0b6e4f;
+      --accent:#f2b705;
+      --bg:#ffffff;
+      --muted:#666;
+      --max-width:1100px;
+      --radius:8px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;color:#222;background:var(--bg);line-height:1.4}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    .site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
+    .header-inner{display:flex;align-items:center;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:700}
+    .logo svg{border-radius:6px}
+    .nav{margin-left:auto;display:flex;gap:16px}
+    .nav a{text-decoration:none;color:var(--muted);padding:10px 8px}
+    .nav a:hover{color:var(--primary)}
+    .nav-toggle{display:none;background:none;border:0;font-size:20px}
+
+    .hero{padding:48px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .hero h1{font-size:2rem;margin:0 0 16px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;margin-bottom:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;background:transparent;border:1px solid #ddd;color:var(--muted)}
+    .btn-primary{background:var(--primary);color:white;border:0}
+    .icons-list{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
+    .hero-image img{width:100%;height:auto;border-radius:12px;display:block}
+
+    .section-light{padding:40px 0}
+    .section-dark{padding:40px 0;background:#f8fbf8}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+    .project{background:white;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    .project img{display:block;width:100%;height:160px;object-fit:cover}
+    .proj-info{padding:12px}
+
+    .clients-logos{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:12px}
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+    blockquote{background:white;padding:16px;border-left:4px solid var(--primary);border-radius:8px;margin:0}
+    blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem}
+
+    .contact-section .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:start}
+    .contact-form{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.04);display:flex;flex-direction:column;gap:8px}
+    .contact-form label{display:flex;flex-direction:column;font-size:0.95rem;color:var(--muted)}
+    .contact-form input, .contact-form textarea{padding:10px;border-radius:6px;border:1px solid #ddd;font-size:1rem}
+    .form-note{font-size:0.9rem;color:var(--muted);margin-top:6px}
+
+    .site-footer{border-top:1px solid #eee;padding:16px 0;margin-top:24px}
+    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .contact-section .contact-grid{grid-template-columns:1fr}
+      .nav{position:absolute;right:14px;top:64px;background:white;padding:12px;border-radius:8px;flex-direction:column;display:none}
+      .nav.show{display:flex}
+      .nav-toggle{display:block;margin-left:auto}
+      .logo span{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="10" y="40" width="80" height="40" rx="6" fill="#0b6e4f"></rect>
+          <polygon points="10,40 50,5 90,40" fill="#f2b705"></polygon>
+        </svg>
+        <span>PT Surya Delima Gemilang</span>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#projects">Proyek</a>
+        <a href="#clients">Klien</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Pembangunan & Renovasi Profesional — Aman, Tepat Waktu, Berkualitas</h1>
+          <p>PT Surya Delima Gemilang mengerjakan proyek sipil, gedung komersial, fasilitas industri, dan renovasi dengan standar keselamatan dan mutu tertinggi.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Minta Penawaran</a>
+            <a class="btn" href="#projects">Lihat Proyek Kami</a>
+          </div>
+          <ul class="icons-list">
+            <li>✅ Sertifikasi Keselamatan</li>
+            <li>⚖ Kontrak & Jaminan</li>
+            <li>📅 Penyelesaian Tepat Waktu</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000&auto=format&fit=crop" alt="Konstruksi gedung - ilustrasi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-light">
+      <div class="container">
+        <h2>Tentang Kami</h2>
+        <p>Berpengalaman lebih dari 10 tahun di bidang konstruksi, PT Surya Delima Gemilang berfokus pada kualitas, keselamatan, dan kepuasan klien.</p>
+        <div class="about-grid">
+          <div>
+            <h3>Visi</h3>
+            <p>Menjadi mitra konstruksi terpercaya yang menghadirkan solusi bangunan berkualitas untuk Indonesia.</p>
+          </div>
+          <div>
+            <h3>Misi</h3>
+            <ul>
+              <li>Mengutamakan keselamatan & standar mutu.</li>
+              <li>Pengelolaan proyek yang transparan dan akuntabel.</li>
+              <li>Inovasi dalam metode & material konstruksi.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-dark">
+      <div class="container">
+        <h2>Layanan Kami</h2>
+        <div class="services-grid">
+          <article class="card"><h4>General Contracting</h4><p>Pelaksanaan proyek mulai dari perencanaan hingga serah terima.</p></article>
+          <article class="card"><h4>Manajemen Proyek</h4><p>Manajemen jadwal, anggaran, mutu, dan keselamatan.</p></article>
+          <article class="card"><h4>Renovasi & Rehabilitasi</h4><p>Pembaruan fasilitas dan perbaikan struktural.</p></article>
+          <article class="card"><h4>Struktur & Sipil</h4><p>Pekerjaan struktur beton, baja, fondasi, jalan, dan drainase.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-light">
+      <div class="container">
+        <h2>Proyek Terpilih</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1505842465776-3d7e9b0bd3b7?q=80&w=800&auto=format&fit=crop" alt="Proyek 1" />
+            <div class="proj-info"><h4>Gedung Perkantoran XYZ</h4><p>12 lantai — selesai 2023</p></div>
+          </div>
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=800&auto=format&fit=crop" alt="Proyek 2" />
+            <div class="proj-info"><h4>Pabrik ABC</h4><p>Fasilitas industri — selesai 2022</p></div>
+          </div>
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1529429617124-6f2e7d2bd0b2?q=80&w=800&auto=format&fit=crop" alt="Proyek 3" />
+            <div class="proj-info"><h4>Renovasi Hotel M</h4><p>Interior & fasad — selesai 2024</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="section-dark">
+      <div class="container">
+        <h2>Klien & Mitra</h2>
+        <div class="clients-logos">
+          <img src="https://via.placeholder.com/140x60?text=KLIEN+1" alt="Klien 1" />
+          <img src="https://via.placeholder.com/140x60?text=KLIEN+2" alt="Klien 2" />
+          <img src="https://via.placeholder.com/140x60?text=KLIEN+3" alt="Klien 3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Testimoni</h2>
+        <div class="testimonials">
+          <blockquote>"Pelaksanaan proyek tepat waktu dan komunikasi jelas."<cite>— PT Mitra Utama</cite></blockquote>
+          <blockquote>"Profesional dan tanggap terhadap perubahan desain di lapangan."<cite>— CV Pembangun Sejahtera</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-dark contact-section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Kontak & Permintaan Penawaran</h2>
+          <ul class="contact-info">
+            <li><strong>Alamat:</strong> Jl. Contoh No. 12, Jakarta</li>
+            <li><strong>Telp:</strong> (021) 555-1234</li>
+            <li><strong>Email:</strong> <a href="mailto:info@suryadelima.co.id">info@suryadelima.co.id</a></li>
+          </ul>
+        </div>
+        <form id="contactForm" class="contact-form" onsubmit="return handleForm(event)">
+          <label>Nama <input type="text" id="name" required /></label>
+          <label>Email <input type="email" id="email" required /></label>
+          <label>Telepon <input type="tel" id="phone" /></label>
+          <label>Ringkasan Proyek<textarea id="message" rows="5" required></textarea></label>
+          <button class="btn btn-primary" type="submit">Kirim</button>
+          <p class="form-note">* Kami akan menghubungi Anda segera.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> PT Surya Delima Gemilang</div>
+      <div class="social"><a href="#">LinkedIn</a> · <a href="#">Instagram</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mainNav.classList.toggle('show');
+    });
+
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Mohon lengkapi nama, email, dan ringkasan proyek.');
+        return false;
+      }
+      const subject = encodeURIComponent('Permintaan Penawaran - ' + name);
+      const body = encodeURIComponent(Nama: ${name}\nEmail: ${email}\nTelepon: ${phone}\n\nProyek:\n${message});
+      window.location.href = mailto:info@suryadelima.co.id?subject=${subject}&body=${body};
+      return false;
+    }
+  </script>
+</body>
+</html>

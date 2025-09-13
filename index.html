@@ -76,6 +76,13 @@
         margin-bottom: 24px; /* atau 32px kalau mau lebih lega */
     }
 
+    .logo-navbar {
+        height: 36px;  /* fix tinggi logo */
+        width: auto;   /* biar proporsional */
+    }
+
+
+
 
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr}
@@ -91,11 +98,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#">
-        <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
-          <rect x="10" y="40" width="80" height="40" rx="6" fill="#0b6e4f"></rect>
-          <polygon points="10,40 50,5 90,40" fill="#f2b705"></polygon>
-          <image />
-        </svg>
+        <img src="logo.jpeg" alt="PT Surya Delima Gemilang" class="logo-navbar"/>
         <span>PT Surya Delima Gemilang</span>
       </a>
       <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
@@ -128,7 +131,7 @@
           </ul>
         </div>
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000&auto=format&fit=crop" alt="Konstruksi gedung - ilustrasi" />
+          <img src="home-image.jpeg" alt="Konstruksi gedung - ilustrasi" />
         </div>
       </div>
     </section>
@@ -140,11 +143,11 @@
         <p>PT. Surya Delima Gemilang is one of the companies in the field of Civil Construction</p>
         <div class="about-grid">
           <div>
-            <h3>Visi</h3>
+            <h3>Vission</h3>
             <p>To be a leader in Indonesia's construction industry, with a reputation for excellence in innovation, quality, and customer service.</p>
           </div>
           <div>
-            <h3>Misi</h3>
+            <h3>Mission</h3>
             <ul class="list-spaced">
               <li>Providing civil constructionand that prioritize quality, timeliness, and cost efficiency</li>
               <li>Prioritizing occupational safetyandtheenvironment in every project weundertake.</li>
@@ -175,7 +178,7 @@
         <h2>Our Experience</h2>
         <div class="projects-grid">
           <div class="project">
-            <img src="https://images.unsplash.com/photo-1505842465776-3d7e9b0bd3b7?q=80&w=800&auto=format&fit=crop" alt="Proyek 1" />
+            <img src="project.jpeg" alt="Proyek 1" />
             <div class="proj-info"><h4>Perumahan Kota Citra Graha</h4><p>CLUSTER FLAMBOYAN, JL. AHMAD YANI KM-17,5 BANJARMASIN - KALSEL</p></div>
           </div>
           <div class="project">
@@ -229,7 +232,7 @@
     <section id="contact" class="section-dark contact-section">
       <div class="container contact-grid">
         <div>
-          <h2>Kontak & Permintaan Penawaran</h2>
+          <h2>Contact Us</h2>
           <ul class="contact-info">
             <li><strong>Address:</strong> Ruko Taman Sriwedari Lantai 2, Cibubur – Jawa Barat</li>
             <li><strong>Workshop:</strong> Jl Pringgondani VIII no 54 Cibubur</li>
